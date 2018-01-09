@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:42:33 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/28 18:56:53 by aparabos         ###   ########.fr       */
+/*   Created: 2017/11/08 18:55:12 by aparabos          #+#    #+#             */
+/*   Updated: 2017/12/09 15:38:27 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strsubdel(char *s, unsigned int start, size_t len)
 {
-	char	*tmp_s;
+	char	*tmp;
+	size_t	i;
 
-	tmp_s = (char *)s;
-	while (*tmp_s)
+	i = 0;
+	if (!s)
+		return (0);
+	if (!(tmp = (char *)ft_strnew(len)))
+		return (0);
+	while (s[start] && i < len && tmp != NULL)
 	{
-		if (*tmp_s == c)
-			return (tmp_s);
-		tmp_s++;
+		tmp[i] = s[start];
+		i++;
+		start++;
 	}
-	if (*tmp_s == '\0' && c == '\0')
-		return (tmp_s);
-	return (NULL);
+	free(s);
+	return (tmp);
 }

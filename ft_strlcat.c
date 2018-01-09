@@ -6,7 +6,7 @@
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:16:06 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/08 15:13:52 by aparabos         ###   ########.fr       */
+/*   Updated: 2017/11/11 14:45:47 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (size == 0)
-		return (0);
+		return (ft_strlen(dst));
 	while (dst[i] && i < size)
 		i++;
 	s1_end = i;

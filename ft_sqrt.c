@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:42:33 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/28 18:56:53 by aparabos         ###   ########.fr       */
+/*   Created: 2017/11/10 16:47:04 by aparabos          #+#    #+#             */
+/*   Updated: 2017/11/10 16:47:27 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+int		ft_sqrt(int nb)
 {
-	char	*tmp_s;
+	int		i;
 
-	tmp_s = (char *)s;
-	while (*tmp_s)
+	i = 1;
+	if (nb < 0)
+		return (0);
+	while (i * i <= nb)
 	{
-		if (*tmp_s == c)
-			return (tmp_s);
-		tmp_s++;
+		if (i * i < 0)
+			return (0);
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	if (*tmp_s == '\0' && c == '\0')
-		return (tmp_s);
-	return (NULL);
+	return (0);
 }

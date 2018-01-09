@@ -6,7 +6,7 @@
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:28:35 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/09 11:48:23 by aparabos         ###   ########.fr       */
+/*   Updated: 2017/11/12 12:41:37 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			**ft_strsplit(char const *s, char c)
 		tmp[0] = 0;
 		return (tmp);
 	}
-	if (!(tmp = (char **)malloc(sizeof(char *) * ft_count_words(s, c))))
+	if (!(tmp = (char **)malloc(sizeof(char *) * ft_count_words(s, c) + 1)))
 		return (NULL);
 	tmp = ft_loop(s, c, tmp);
 	return (tmp);

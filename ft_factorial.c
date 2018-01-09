@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:42:33 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/28 18:56:53 by aparabos         ###   ########.fr       */
+/*   Created: 2017/11/10 16:45:21 by aparabos          #+#    #+#             */
+/*   Updated: 2017/11/10 16:47:55 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+int		ft_factorial(int nb)
 {
-	char	*tmp_s;
-
-	tmp_s = (char *)s;
-	while (*tmp_s)
-	{
-		if (*tmp_s == c)
-			return (tmp_s);
-		tmp_s++;
-	}
-	if (*tmp_s == '\0' && c == '\0')
-		return (tmp_s);
-	return (NULL);
+	if (nb > 12 || nb < 0)
+		return (0);
+	if (nb == 1)
+		return (1);
+	if (nb == 0)
+		return (1);
+	else
+		return (ft_factorial(nb - 1) * nb);
 }

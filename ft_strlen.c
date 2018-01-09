@@ -6,7 +6,7 @@
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 12:15:08 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/08 18:24:24 by aparabos         ###   ########.fr       */
+/*   Updated: 2017/11/10 16:12:42 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 size_t		ft_strlen(const char *s)
 {
 	size_t	i;
-	char	*tmp_s;
 
 	i = 0;
-	tmp_s = (char *)s;
-	while (tmp_s[i])
+	while (s[i])
 		i++;
 	return (i);
 }

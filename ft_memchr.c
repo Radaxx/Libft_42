@@ -6,7 +6,7 @@
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:44:44 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/09 14:47:24 by aparabos         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:27:31 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	tmp = s;
 	while (i < n)
 	{
-		if (tmp[i] == c)
+		if ((unsigned char)tmp[i] == (unsigned char)c)
 			return ((char *)tmp + i);
 		i++;
 	}

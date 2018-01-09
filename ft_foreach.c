@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:42:33 by aparabos          #+#    #+#             */
-/*   Updated: 2017/11/28 18:56:53 by aparabos         ###   ########.fr       */
+/*   Created: 2017/11/10 16:51:56 by aparabos          #+#    #+#             */
+/*   Updated: 2017/11/10 16:52:01 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	char	*tmp_s;
+	int		i;
 
-	tmp_s = (char *)s;
-	while (*tmp_s)
+	i = 0;
+	while (i < length)
 	{
-		if (*tmp_s == c)
-			return (tmp_s);
-		tmp_s++;
+		(*f)(tab[i]);
+		i++;
 	}
-	if (*tmp_s == '\0' && c == '\0')
-		return (tmp_s);
-	return (NULL);
 }
