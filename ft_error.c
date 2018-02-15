@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 17:06:34 by aparabos          #+#    #+#             */
-/*   Updated: 2018/01/19 10:38:49 by aparabos         ###   ########.fr       */
+/*   Created: 2018/01/15 14:16:19 by aparabos          #+#    #+#             */
+/*   Updated: 2018/01/29 12:07:58 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		ft_error(char *str)
 {
-	if (as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	ft_putendl(str);
+	exit(EXIT_FAILURE);
 }

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_printarray.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 17:06:34 by aparabos          #+#    #+#             */
-/*   Updated: 2018/01/19 10:38:49 by aparabos         ###   ########.fr       */
+/*   Created: 2018/01/15 16:49:02 by aparabos          #+#    #+#             */
+/*   Updated: 2018/01/15 16:49:49 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_printarray(char **str)
 {
-	if (as)
+	int		i;
+
+	i = 0;
+	while (str[i])
 	{
-		free(*as);
-		*as = NULL;
+		ft_putendl(str[i]);
+		i++;
 	}
 }
