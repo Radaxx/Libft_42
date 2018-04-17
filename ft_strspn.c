@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:42:33 by aparabos          #+#    #+#             */
-/*   Updated: 2018/04/17 08:31:59 by aparabos         ###   ########.fr       */
+/*   Created: 2018/04/17 08:23:07 by aparabos          #+#    #+#             */
+/*   Updated: 2018/04/17 08:28:23 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t		ft_strspn(const char *s1, const char *s2)
 {
-	while (*s != (char)c)
-		if (!*s++)
-			return (0);
-	return ((char *)s);
+	size_t	ret;
+
+	ret = 0;
+	while (*s1 && ft_strchr(s2, *s1++))
+		ret++;
+	return (ret);
 }

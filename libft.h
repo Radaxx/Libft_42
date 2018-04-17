@@ -6,7 +6,7 @@
 /*   By: aparabos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 12:12:03 by aparabos          #+#    #+#             */
-/*   Updated: 2018/01/29 12:08:24 by aparabos         ###   ########.fr       */
+/*   Updated: 2018/04/17 08:44:25 by aparabos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,13 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 
 size_t				ft_strlcat(char *dst, const char *src, size_t len);
 size_t				ft_strlen(const char *str);
+size_t				ft_strspn(const char *s1, const char *s2);
+size_t				ft_strcspn(const char *s1, const char *s2);
 
 char				**ft_strsplit(char const *s, char c);
 char				**ft_freetab(char **tab);
 
+char				*ft_itoa_base(int value, int base);
 char				*ft_itoa(int n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strsubdel(char *s, unsigned int start, size_t len);

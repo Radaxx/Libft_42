@@ -6,7 +6,7 @@
 #    By: aparabos <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 12:06:40 by aparabos          #+#    #+#              #
-#    Updated: 2018/01/28 15:07:47 by aparabos         ###   ########.fr        #
+#    Updated: 2018/04/17 08:44:41 by aparabos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,10 @@ SRCS = ft_pow.c \
 	   ft_error.c \
 	   ft_printarray.c \
 	   ft_xmalloc.c \
-	   ft_freetab.c
+	   ft_freetab.c \
+	   ft_strspn.c \
+	   ft_strcspn.c \
+	   ft_itoa_base.c
 MAKEFLAGS = s
 OBJS = $(SRCS:.c=.o)
 .PHONY: all re fclean clean
